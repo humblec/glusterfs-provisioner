@@ -1,0 +1,11 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: glusterfs-provisioner
+spec:
+  containers:
+    - name: glusterfs-provisioner
+      image: hchiramm/glusterfs-provisioner
+      args:
+        - "-provisioner-name=glusterfs-provisioner"
+      imagePullPolicy: "IfNotPresent"
